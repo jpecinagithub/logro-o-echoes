@@ -21,10 +21,20 @@ const Index = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-4rem)] mt-16 relative">
+    <div className="h-[calc(100dvh-4rem)] mt-16 relative flex flex-col md:flex-row">
+      {/* List (desktop sidebar) */}
+      <div className={cn(
+        "hidden md:block md:w-80 lg:w-96 md:flex-shrink-0 md:border-r md:border-border overflow-y-auto scrollbar-hide"
+      )}>
+        <PoiList 
+          selectedPoi={selectedPoi} 
+          onSelect={handlePoiSelect} 
+        />
+      </div>
+
       {/* Map */}
       <div className={cn(
-        "absolute inset-0 transition-opacity duration-300",
+        "flex-1 relative transition-opacity duration-300",
         showList ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto" : "opacity-100"
       )}>
         <MapView 
@@ -33,10 +43,10 @@ const Index = () => {
         />
       </div>
       
-      {/* List (mobile overlay / desktop sidebar) */}
+      {/* List (mobile overlay) */}
       <div className={cn(
-        "absolute inset-0 bg-background overflow-y-auto transition-transform duration-300 md:relative md:w-80 md:border-r md:border-border md:translate-x-0",
-        showList ? "translate-x-0" : "translate-x-full md:translate-x-0"
+        "fixed inset-0 top-16 bg-background overflow-y-auto transition-transform duration-300 z-30 md:hidden scrollbar-hide",
+        showList ? "translate-x-0" : "translate-x-full"
       )}>
         <PoiList 
           selectedPoi={selectedPoi} 
@@ -48,7 +58,7 @@ const Index = () => {
       <Button
         onClick={() => setShowList(!showList)}
         size="icon"
-        className="absolute bottom-6 right-4 z-20 h-14 w-14 rounded-full shadow-xl bg-gradient-to-br from-primary to-accent hover:opacity-90 md:hidden"
+        className="fixed bottom-6 right-4 z-40 h-14 w-14 rounded-full shadow-xl bg-gradient-to-br from-primary to-accent hover:opacity-90 md:hidden"
         aria-label={showList ? 'Ver mapa' : 'Ver lista'}
       >
         {showList ? (

@@ -76,31 +76,31 @@ const AudioPlayer = ({ src, title, className }: AudioPlayerProps) => {
   };
 
   return (
-    <div className={cn("bg-secondary/50 rounded-xl p-4", className)}>
+    <div className={cn("bg-secondary/50 rounded-xl p-3 sm:p-4", className)}>
       <audio ref={audioRef} src={src} preload="metadata" />
       
       {title && (
-        <p className="text-sm font-medium text-muted-foreground mb-3 truncate">
+        <p className="text-xs sm:text-sm font-medium text-muted-foreground mb-2 sm:mb-3 truncate">
           🎧 {title}
         </p>
       )}
       
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
         <Button
           variant="default"
           size="icon"
           onClick={togglePlay}
-          className="h-12 w-12 rounded-full bg-primary hover:bg-primary/90 shrink-0"
+          className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-primary hover:bg-primary/90 shrink-0"
           aria-label={isPlaying ? 'Pausar' : 'Reproducir'}
         >
           {isPlaying ? (
-            <Pause className="h-5 w-5" />
+            <Pause className="h-4 w-4 sm:h-5 sm:w-5" />
           ) : (
-            <Play className="h-5 w-5 ml-0.5" />
+            <Play className="h-4 w-4 sm:h-5 sm:w-5 ml-0.5" />
           )}
         </Button>
         
-        <div className="flex-1 space-y-1">
+        <div className="flex-1 space-y-1 min-w-0">
           <Slider
             value={[currentTime]}
             max={duration || 100}
@@ -109,7 +109,7 @@ const AudioPlayer = ({ src, title, className }: AudioPlayerProps) => {
             className="cursor-pointer"
             aria-label="Progreso del audio"
           />
-          <div className="flex justify-between text-xs text-muted-foreground">
+          <div className="flex justify-between text-[10px] sm:text-xs text-muted-foreground">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>
@@ -119,13 +119,13 @@ const AudioPlayer = ({ src, title, className }: AudioPlayerProps) => {
           variant="ghost"
           size="icon"
           onClick={toggleMute}
-          className="h-10 w-10 shrink-0"
+          className="h-8 w-8 sm:h-10 sm:w-10 shrink-0 hidden xs:flex"
           aria-label={isMuted ? 'Activar sonido' : 'Silenciar'}
         >
           {isMuted ? (
-            <VolumeX className="h-5 w-5" />
+            <VolumeX className="h-4 w-4 sm:h-5 sm:w-5" />
           ) : (
-            <Volume2 className="h-5 w-5" />
+            <Volume2 className="h-4 w-4 sm:h-5 sm:w-5" />
           )}
         </Button>
       </div>

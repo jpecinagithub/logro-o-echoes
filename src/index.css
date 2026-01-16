@@ -114,4 +114,22 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+  
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Extra small breakpoint for tiny phones */
+@media (min-width: 375px) {
+  .xs\:inline {
+    display: inline;
+  }
+  .xs\:flex {
+    display: flex;
+  }
 }

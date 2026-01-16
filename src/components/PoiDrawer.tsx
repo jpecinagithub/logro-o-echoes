@@ -36,7 +36,7 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-            className="fixed bottom-0 left-0 right-0 z-50 bg-card rounded-t-3xl shadow-2xl max-h-[85vh] overflow-hidden md:absolute md:right-4 md:bottom-4 md:left-auto md:top-20 md:w-96 md:rounded-2xl md:max-h-none"
+            className="fixed bottom-0 left-0 right-0 z-50 bg-card rounded-t-3xl shadow-2xl max-h-[80dvh] overflow-hidden md:fixed md:right-4 md:bottom-4 md:left-auto md:top-auto md:w-96 md:max-w-[calc(100vw-2rem)] md:rounded-2xl md:max-h-[calc(100dvh-6rem)]"
           >
             {/* Handle bar (mobile) */}
             <div className="flex justify-center pt-3 pb-1 md:hidden">
@@ -48,16 +48,16 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
               variant="ghost"
               size="icon"
               onClick={onClose}
-              className="absolute top-4 right-4 z-10 bg-background/80 backdrop-blur-sm rounded-full"
+              className="absolute top-3 right-3 md:top-4 md:right-4 z-10 bg-background/80 backdrop-blur-sm rounded-full h-8 w-8 md:h-10 md:w-10"
               aria-label="Cerrar"
             >
-              <X className="h-5 w-5" />
+              <X className="h-4 w-4 md:h-5 md:w-5" />
             </Button>
             
             {/* Content */}
-            <div className="overflow-y-auto max-h-[calc(85vh-20px)] md:max-h-[calc(100vh-160px)] scrollbar-hide">
+            <div className="overflow-y-auto max-h-[calc(80dvh-20px)] md:max-h-[calc(100dvh-8rem)] scrollbar-hide">
               {/* Image */}
-              <div className="relative h-48 md:h-56">
+              <div className="relative h-40 sm:h-48 md:h-56">
                 <img
                   src={poi.imageSrc ? getAssetPath(poi.imageSrc) : getAssetPath('/placeholder.svg')}
                   alt={poi.title}
@@ -67,21 +67,21 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 
                 {/* Order badge */}
-                <div className="absolute top-4 left-4 bg-gradient-to-br from-primary to-accent text-white w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-lg shadow-lg">
+                <div className="absolute top-3 left-3 md:top-4 md:left-4 bg-gradient-to-br from-primary to-accent text-white w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl flex items-center justify-center font-bold text-base md:text-lg shadow-lg">
                   {poi.order}
                 </div>
               </div>
               
               {/* Text content */}
-              <div className="p-5 space-y-4">
+              <div className="p-4 md:p-5 space-y-3 md:space-y-4 safe-area-bottom">
                 <div>
                   <div className="flex items-start gap-2 mb-2">
-                    <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                    <h2 className="text-xl font-bold text-foreground leading-tight">
+                    <MapPin className="h-4 w-4 md:h-5 md:w-5 text-primary shrink-0 mt-0.5" />
+                    <h2 className="text-lg md:text-xl font-bold text-foreground leading-tight">
                       {poi.title}
                     </h2>
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {poi.description}
                   </p>
                 </div>
@@ -96,7 +96,7 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
                 <Button
                   onClick={openInMaps}
                   variant="outline"
-                  className="w-full gap-2 h-12 rounded-xl"
+                  className="w-full gap-2 h-11 md:h-12 rounded-xl text-sm md:text-base"
                 >
                   <Navigation className="h-4 w-4" />
                   Cómo llegar

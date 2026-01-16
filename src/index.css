@@ -4,84 +4,84 @@
 
 @layer base {
   :root {
-    /* Historic, warm cultural palette */
-    --background: 40 33% 96%;
-    --foreground: 25 30% 15%;
+    /* Modern, youthful palette */
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
 
-    --card: 40 40% 98%;
-    --card-foreground: 25 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
 
-    --popover: 40 40% 98%;
-    --popover-foreground: 25 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
 
-    --primary: 25 60% 35%;
-    --primary-foreground: 40 40% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 25% 88%;
-    --secondary-foreground: 25 30% 20%;
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 220 25% 20%;
 
-    --muted: 40 20% 90%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 220 14% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 35 70% 45%;
-    --accent-foreground: 40 40% 98%;
+    --accent: 340 82% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 20% 82%;
-    --input: 35 20% 85%;
-    --ring: 25 60% 35%;
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 262 83% 58%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --sidebar-background: 40 30% 94%;
-    --sidebar-foreground: 25 30% 20%;
-    --sidebar-primary: 25 60% 35%;
-    --sidebar-primary-foreground: 40 40% 98%;
-    --sidebar-accent: 35 25% 88%;
-    --sidebar-accent-foreground: 25 30% 20%;
-    --sidebar-border: 35 20% 82%;
-    --sidebar-ring: 25 60% 35%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 25% 20%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 92%;
+    --sidebar-accent-foreground: 220 25% 20%;
+    --sidebar-border: 220 14% 88%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
-    --background: 25 25% 10%;
-    --foreground: 40 30% 92%;
+    --background: 220 25% 8%;
+    --foreground: 220 14% 95%;
 
-    --card: 25 22% 14%;
-    --card-foreground: 40 30% 92%;
+    --card: 220 25% 12%;
+    --card-foreground: 220 14% 95%;
 
-    --popover: 25 22% 14%;
-    --popover-foreground: 40 30% 92%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 220 14% 95%;
 
-    --primary: 35 65% 55%;
-    --primary-foreground: 25 30% 10%;
+    --primary: 262 83% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 25 20% 22%;
-    --secondary-foreground: 40 30% 92%;
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 220 14% 95%;
 
-    --muted: 25 18% 20%;
-    --muted-foreground: 35 15% 60%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 35 70% 50%;
-    --accent-foreground: 25 30% 10%;
+    --accent: 340 82% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 25 18% 25%;
-    --input: 25 18% 25%;
-    --ring: 35 65% 55%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 262 83% 65%;
 
-    --sidebar-background: 25 25% 12%;
-    --sidebar-foreground: 40 30% 92%;
-    --sidebar-primary: 35 65% 55%;
-    --sidebar-primary-foreground: 25 30% 10%;
-    --sidebar-accent: 25 20% 20%;
-    --sidebar-accent-foreground: 40 30% 92%;
-    --sidebar-border: 25 18% 25%;
-    --sidebar-ring: 35 65% 55%;
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 220 14% 95%;
+    --sidebar-primary: 262 83% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 18%;
+    --sidebar-accent-foreground: 220 14% 95%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 262 83% 65%;
   }
 }
 
@@ -92,11 +92,12 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Playfair Display', 'Georgia', serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', 'Georgia', serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply font-bold tracking-tight;
   }
 }
 

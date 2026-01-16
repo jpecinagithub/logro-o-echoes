@@ -2,7 +2,7 @@ import AlbumView from '@/components/AlbumView';
 
 const Album = () => {
   return (
-    <div className="mt-14">
+    <div className="mt-16">
       <AlbumView />
     </div>
   );

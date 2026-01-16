@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Headphones } from 'lucide-react';
+import { MapPin, Headphones, Sparkles } from 'lucide-react';
 import { POIS, type POI } from '@/data/pois';
 import { cn } from '@/lib/utils';
 
@@ -11,9 +11,14 @@ interface PoiListProps {
 const PoiList = ({ selectedPoi, onSelect }: PoiListProps) => {
   return (
     <div className="p-4 space-y-3">
-      <h2 className="text-lg font-semibold text-foreground mb-4">
-        Puntos de Interés
-      </h2>
+      <div className="flex items-center gap-3 mb-4">
+        <div className="bg-gradient-to-br from-primary to-accent p-2 rounded-xl">
+          <Sparkles className="h-4 w-4 text-white" />
+        </div>
+        <h2 className="text-lg font-bold text-foreground">
+          Puntos de Interés
+        </h2>
+      </div>
       
       {POIS.map((poi, index) => (
         <motion.button
@@ -23,16 +28,16 @@ const PoiList = ({ selectedPoi, onSelect }: PoiListProps) => {
           transition={{ delay: index * 0.05 }}
           onClick={() => onSelect(poi)}
           className={cn(
-            "w-full flex items-center gap-4 p-4 rounded-xl text-left transition-all",
-            "bg-card hover:bg-secondary/80 border border-transparent",
+            "w-full flex items-center gap-4 p-4 rounded-2xl text-left transition-all",
+            "bg-card hover:bg-secondary/80 border-2 border-transparent shadow-sm hover:shadow-md",
             selectedPoi?.id === poi.id && "border-primary bg-primary/5"
           )}
         >
           {/* Order number */}
           <div className={cn(
-            "w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm shrink-0",
+            "w-11 h-11 rounded-xl flex items-center justify-center font-bold text-sm shrink-0 transition-all",
             selectedPoi?.id === poi.id 
-              ? "bg-primary text-primary-foreground" 
+              ? "bg-gradient-to-br from-primary to-accent text-white shadow-lg" 
               : "bg-secondary text-secondary-foreground"
           )}>
             {poi.order}
@@ -40,17 +45,19 @@ const PoiList = ({ selectedPoi, onSelect }: PoiListProps) => {
           
           {/* Content */}
           <div className="flex-1 min-w-0">
-            <h3 className="font-medium text-foreground truncate">
+            <h3 className="font-semibold text-foreground truncate">
               {poi.title}
             </h3>
             <p className="text-sm text-muted-foreground flex items-center gap-1 mt-0.5">
               <MapPin className="h-3 w-3" />
-              <span className="truncate">{poi.description.slice(0, 40)}...</span>
+              <span className="truncate">{poi.description.slice(0, 35)}...</span>
             </p>
           </div>
           
           {/* Audio indicator */}
-          <Headphones className="h-5 w-5 text-muted-foreground shrink-0" />
+          <div className="bg-secondary p-2 rounded-full">
+            <Headphones className="h-4 w-4 text-muted-foreground" />
+          </div>
         </motion.button>
       ))}
     </div>

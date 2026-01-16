@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, XCircle, Trophy, RotateCcw, Brain, Zap, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { QUIZ_QUESTIONS } from '@/data/quiz';
+import { getRandomQuestions, QUIZ_QUESTIONS_COUNT, QuizQuestion } from '@/data/quiz';
 import { useAppStore } from '@/store/appStore';
 import { cn } from '@/lib/utils';
 
@@ -16,13 +16,17 @@ const QuizView = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [score, setScore] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
+  const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   
   const { quizBestScore, setQuizBestScore } = useAppStore();
 
-  const currentQuestion = QUIZ_QUESTIONS[currentIndex];
-  const progress = ((currentIndex + (isAnswered ? 1 : 0)) / QUIZ_QUESTIONS.length) * 100;
+  const currentQuestion = questions[currentIndex];
+  const totalQuestions = questions.length || QUIZ_QUESTIONS_COUNT;
+  const progress = ((currentIndex + (isAnswered ? 1 : 0)) / totalQuestions) * 100;
 
   const startQuiz = () => {
+    const randomQuestions = getRandomQuestions();
+    setQuestions(randomQuestions);
     setQuizState('playing');
     setCurrentIndex(0);
     setSelectedAnswer(null);
@@ -32,7 +36,7 @@ const QuizView = () => {
   };
 
   const handleAnswer = (answerIndex: number) => {
-    if (isAnswered) return;
+    if (isAnswered || !currentQuestion) return;
     
     setSelectedAnswer(answerIndex);
     setIsAnswered(true);
@@ -45,7 +49,7 @@ const QuizView = () => {
   };
 
   const nextQuestion = () => {
-    if (currentIndex < QUIZ_QUESTIONS.length - 1) {
+    if (currentIndex < questions.length - 1) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedAnswer(null);
       setIsAnswered(false);
@@ -62,7 +66,7 @@ const QuizView = () => {
   };
 
   const getScoreMessage = () => {
-    const percentage = (score / QUIZ_QUESTIONS.length) * 100;
+    const percentage = (score / totalQuestions) * 100;
     if (percentage === 100) return '¡Perfecto! Eres un crack 🎯';
     if (percentage >= 80) return '¡Genial! Casi perfecto 🔥';
     if (percentage >= 60) return '¡Muy bien! Vas por buen camino 💪';
@@ -87,7 +91,7 @@ const QuizView = () => {
             ¡Ponte a prueba!
           </h1>
           <p className="text-muted-foreground mb-8">
-            ¿Cuánto sabes sobre San Josemaría en Logroño? Demuestra tus conocimientos.
+            ¿Cuánto sabes sobre San Josemaría en Logroño? Demuestra tus conocimientos con {QUIZ_QUESTIONS_COUNT} preguntas aleatorias.
           </p>
           
           <div className="bg-card rounded-2xl p-5 mb-8 border border-border shadow-sm">
@@ -96,7 +100,7 @@ const QuizView = () => {
                 <Zap className="h-4 w-4 text-accent" />
                 Preguntas
               </span>
-              <span className="font-bold text-lg">{QUIZ_QUESTIONS.length}</span>
+              <span className="font-bold text-lg">{QUIZ_QUESTIONS_COUNT}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground flex items-center gap-2">
@@ -104,7 +108,7 @@ const QuizView = () => {
                 Tu récord
               </span>
               <span className="font-bold text-lg text-primary">
-                {quizBestScore}/{QUIZ_QUESTIONS.length}
+                {quizBestScore}/{QUIZ_QUESTIONS_COUNT}
               </span>
             </div>
           </div>
@@ -144,10 +148,10 @@ const QuizView = () => {
           {/* Score */}
           <div className="bg-card rounded-3xl p-8 mb-8 border border-border shadow-lg">
             <div className="text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-              {score}/{QUIZ_QUESTIONS.length}
+              {score}/{totalQuestions}
             </div>
             <p className="text-muted-foreground">
-              {Math.round((score / QUIZ_QUESTIONS.length) * 100)}% de aciertos
+              {Math.round((score / totalQuestions) * 100)}% de aciertos
             </p>
             
             {/* Answer indicators */}
@@ -191,7 +195,11 @@ const QuizView = () => {
     );
   }
 
-  // Playing screen
+  // Playing screen - guard against no question
+  if (!currentQuestion) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       {/* Progress header */}
@@ -199,7 +207,7 @@ const QuizView = () => {
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-3">
             <span className="text-sm font-medium text-muted-foreground">
-              Pregunta {currentIndex + 1} de {QUIZ_QUESTIONS.length}
+              Pregunta {currentIndex + 1} de {totalQuestions}
             </span>
             <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
               {score} pts
@@ -297,7 +305,7 @@ const QuizView = () => {
                   size="lg" 
                   className="w-full h-14 text-lg font-semibold rounded-xl"
                 >
-                  {currentIndex < QUIZ_QUESTIONS.length - 1 ? 'Siguiente →' : 'Ver resultados 🎉'}
+                  {currentIndex < questions.length - 1 ? 'Siguiente →' : 'Ver resultados 🎉'}
                 </Button>
               </motion.div>
             )}

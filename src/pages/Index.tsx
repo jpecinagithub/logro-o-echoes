@@ -21,7 +21,7 @@ const Index = () => {
   };
 
   return (
-    <div className="h-[calc(100vh-3.5rem-4rem)] mt-14 relative">
+    <div className="h-[calc(100vh-4rem)] mt-16 relative">
       {/* Map */}
       <div className={cn(
         "absolute inset-0 transition-opacity duration-300",
@@ -48,13 +48,13 @@ const Index = () => {
       <Button
         onClick={() => setShowList(!showList)}
         size="icon"
-        className="absolute bottom-20 right-4 z-20 h-14 w-14 rounded-full shadow-lg md:hidden"
+        className="absolute bottom-6 right-4 z-20 h-14 w-14 rounded-full shadow-xl bg-gradient-to-br from-primary to-accent hover:opacity-90 md:hidden"
         aria-label={showList ? 'Ver mapa' : 'Ver lista'}
       >
         {showList ? (
-          <MapIcon className="h-6 w-6" />
+          <MapIcon className="h-6 w-6 text-white" />
         ) : (
-          <List className="h-6 w-6" />
+          <List className="h-6 w-6 text-white" />
         )}
       </Button>
       

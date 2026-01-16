@@ -36,7 +36,7 @@ const MapView = ({ selectedPoi, onPoiSelect }: MapViewProps) => {
   const [map, setMap] = useState<google.maps.Map | null>(null);
   
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: 'AIzaSyBqR8TtNwtv64aSyFOLtzinlGP8GhSxV5M',
+    googleMapsApiKey: 'AIzaSyCHhW6RGwsJKWzIukbHD-cn0ZRiq36A638',
   });
 
   const onLoad = useCallback((map: google.maps.Map) => {

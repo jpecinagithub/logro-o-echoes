@@ -98,7 +98,7 @@ export const POIS: POI[] = [
     lng: -2.4466997648805777,
     description: "Calle emblemática del centro histórico de Logroño. Arteria principal de la vida comercial y social de la época.",
     audioSrc: "/assets/audio/9-calle-sagasta.wav",
-    imageSrc: "/assets/album/foto18.webp"
+    imageSrc: "/assets/pois/calle-sagasta.webp"
   },
   {
     id: 10,

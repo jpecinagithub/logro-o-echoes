@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 const repoName = "Recorrido-Historico-San-Josemaria-en-Logrono";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? `/${repoName}/` : "/",
+  base: "/Recorrido-Historico-San-Josemaria-en-Logrono/",
   server: {
     host: "::",
     port: 8080,

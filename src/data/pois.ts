@@ -77,7 +77,7 @@ export const POIS: POI[] = [
     lat: 42.467991447546865,
     lng: -2.447316929500878,
     description: "Iglesia de Santiago el Real, templo histórico del Camino de Santiago. Lugar de oración frecuente para la familia Escrivá.",
-    audioSrc: "/assets/audio/7-santiago.wav",
+    audioSrc: "/assets/audio/7- santiago.wav",
     imageSrc: "/assets/pois/iglesia-santiago.jpg"
   },
   {

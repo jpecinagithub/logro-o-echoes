@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { getAssetPath } from '@/lib/assets';
 import type { AlbumPhoto } from '@/data/album';
 
 interface PhotoModalProps {
@@ -84,7 +85,7 @@ const PhotoModal = ({
             {/* Image */}
             <div className="relative aspect-[4/3] bg-muted">
               <img
-                src={photo.src}
+                src={getAssetPath(photo.src)}
                 alt={photo.title}
                 className="w-full h-full object-cover"
               />

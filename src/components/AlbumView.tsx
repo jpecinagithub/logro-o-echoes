@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Camera, Sparkles } from 'lucide-react';
 import { ALBUM_PHOTOS, type AlbumPhoto } from '@/data/album';
+import { getAssetPath } from '@/lib/assets';
 import PhotoModal from './PhotoModal';
 
 const AlbumView = () => {
@@ -66,7 +67,7 @@ const AlbumView = () => {
             className="group relative aspect-square rounded-2xl overflow-hidden bg-muted focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 shadow-sm hover:shadow-xl transition-all duration-300"
           >
             <img
-              src={photo.src}
+              src={getAssetPath(photo.src)}
               alt={photo.title}
               loading="lazy"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

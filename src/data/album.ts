@@ -153,5 +153,40 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     title: "El Puente de Hierro",
     description: "Vista actual del Puente de Hierro sobre el río Ebro, que la familia Escrivá cruzaba para pasear por el Sotillo.",
     year: "2020"
+  },
+  {
+    id: "img-22",
+    src: "/assets/album/logrono-muro-cervantes.jpg",
+    title: "Muro de Cervantes y Torres de La Redonda",
+    description: "Vista histórica del Muro de Cervantes en Logroño con las torres de la Concatedral de La Redonda al fondo.",
+    year: "1920"
+  },
+  {
+    id: "img-23",
+    src: "/assets/album/puente-hierro-actual.jpg",
+    title: "Puente de Hierro - Vista actual",
+    description: "Vista contemporánea del Puente de Hierro desde la calle, mostrando la perspectiva hacia las montañas.",
+    year: "2020"
+  },
+  {
+    id: "img-24",
+    src: "/assets/album/iglesia-santiago-cuadro.jpg",
+    title: "Cuadro de San Josemaría en Santiago",
+    description: "Cuadro de San Josemaría Escrivá en la Iglesia de Santiago el Real de Logroño, parroquia donde la familia asistía a misa.",
+    year: "2020"
+  },
+  {
+    id: "img-25",
+    src: "/assets/album/iglesia-santiago-altar.jpg",
+    title: "Altar dedicado a San Josemaría",
+    description: "Placa conmemorativa en la Iglesia de Santiago que recuerda que San Josemaría perteneció a esta parroquia y aquí descubrió su vocación.",
+    year: "2020"
+  },
+  {
+    id: "img-26",
+    src: "/assets/album/seminario-conciliar-historico.jpg",
+    title: "Seminario Conciliar - Foto histórica",
+    description: "Imagen histórica del Seminario Conciliar de Logroño, donde Josemaría ingresó tras sentir la llamada de Dios.",
+    year: "1918"
   }
 ];

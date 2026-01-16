@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Navigation, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { getAssetPath } from '@/lib/assets';
 import AudioPlayer from './AudioPlayer';
 import type { POI } from '@/data/pois';
 
@@ -58,7 +59,7 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
               {/* Image */}
               <div className="relative h-48 md:h-56">
                 <img
-                  src={poi.imageSrc || '/placeholder.svg'}
+                  src={poi.imageSrc ? getAssetPath(poi.imageSrc) : getAssetPath('/placeholder.svg')}
                   alt={poi.title}
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -87,7 +88,7 @@ const PoiDrawer = ({ poi, onClose }: PoiDrawerProps) => {
                 
                 {/* Audio player */}
                 <AudioPlayer 
-                  src={poi.audioSrc} 
+                  src={getAssetPath(poi.audioSrc)} 
                   title="Audio guía"
                 />
                 

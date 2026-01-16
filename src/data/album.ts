@@ -118,5 +118,40 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     title: "Tapiz de la canonización",
     description: "El tapiz con la imagen de San Josemaría colgado en la fachada de la Basílica de San Pedro durante su ceremonia de canonización.",
     year: "2002"
+  },
+  {
+    id: "img-17",
+    src: "/assets/album/don-fidel-garcia.jpg",
+    title: "Don Fidel García Martínez",
+    description: "El obispo Don Fidel García Martínez, figura importante en la vida religiosa de Logroño durante la juventud de Josemaría.",
+    year: "1921"
+  },
+  {
+    id: "img-18",
+    src: "/assets/album/logrono-invierno-1918.jpg",
+    title: "Logroño en invierno de 1918",
+    description: "Vista de Logroño cubierto de nieve en el invierno de 1918, época en la que Josemaría vio las huellas del carmelita que marcaron su vocación.",
+    year: "1918"
+  },
+  {
+    id: "img-19",
+    src: "/assets/album/plano-logrono-1852.jpg",
+    title: "Plano de Logroño (1852)",
+    description: "Plano histórico de Logroño de 1852 mostrando el Seminario, el Instituto de 2ª Enseñanza y el ex-convento de Carmelitas.",
+    year: "1852"
+  },
+  {
+    id: "img-20",
+    src: "/assets/album/seminario-conciliar.jpg",
+    title: "Seminario Conciliar de Logroño",
+    description: "Fachada del Seminario Conciliar de Logroño donde Josemaría comenzó sus estudios eclesiásticos en 1918.",
+    year: "1920"
+  },
+  {
+    id: "img-21",
+    src: "/assets/album/puente-hierro-2.jpg",
+    title: "El Puente de Hierro",
+    description: "Vista actual del Puente de Hierro sobre el río Ebro, que la familia Escrivá cruzaba para pasear por el Sotillo.",
+    year: "2020"
   }
 ];

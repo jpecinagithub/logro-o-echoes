@@ -44,30 +44,79 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
   },
   {
     id: "img-06",
+    src: "/assets/album/foto14.jpg",
+    title: "El Espolón de Logroño",
+    description: "El emblemático templete del Espolón, paseo principal de Logroño donde la familia Escrivá solía caminar. Una imagen de la época en que Josemaría vivió en la ciudad.",
+    year: "1918"
+  },
+  {
+    id: "img-07",
+    src: "/assets/album/foto15.jpg",
+    title: "Vista del Espolón",
+    description: "Vista panorámica del paseo del Espolón de Logroño, lugar de encuentro de la sociedad logroñesa de principios del siglo XX.",
+    year: "1918"
+  },
+  {
+    id: "img-08",
+    src: "/assets/album/foto18.webp",
+    title: "Calle Sagasta",
+    description: "La emblemática Calle Sagasta de Logroño, centro neurálgico del comercio y la vida social de la ciudad en tiempos de la familia Escrivá.",
+    year: "1919"
+  },
+  {
+    id: "img-09",
+    src: "/assets/album/foto20.jpg",
+    title: "Calles del casco antiguo",
+    description: "Las calles del casco histórico de Logroño, testigos de la juventud de San Josemaría y sus paseos por la ciudad.",
+    year: "1919"
+  },
+  {
+    id: "img-10",
     src: "/assets/album/foto4.jpg",
     title: "Seminarista en Logroño",
     description: "Josemaría como seminarista en el Seminario Conciliar de Logroño, donde comenzó su formación sacerdotal tras ver las huellas en la nieve.",
     year: "1919"
   },
   {
-    id: "img-07",
+    id: "img-11",
     src: "/assets/album/foto2.jpg",
     title: "El joven sacerdote",
     description: "Josemaría Escrivá como sacerdote joven, tras su ordenación el 28 de marzo de 1925 en Zaragoza.",
     year: "1925"
   },
   {
-    id: "img-08",
+    id: "img-12",
     src: "/assets/album/foto7.jpg",
     title: "San Josemaría",
     description: "San Josemaría Escrivá de Balaguer, fundador del Opus Dei. Fue canonizado por el Papa Juan Pablo II el 6 de octubre de 2002.",
     year: "1970"
   },
   {
-    id: "img-09",
+    id: "img-13",
+    src: "/assets/album/foto12.jpg",
+    title: "Concatedral de La Redonda",
+    description: "La Concatedral de Santa María de la Redonda, corazón espiritual de Logroño. La familia Escrivá asistía regularmente a misa en este templo.",
+    year: "2020"
+  },
+  {
+    id: "img-14",
     src: "/assets/album/foto1.jpg",
     title: "Placa conmemorativa",
     description: "Placa en Logroño que recuerda el lugar donde Josemaría vio las huellas de un carmelita descalzo en la nieve, momento decisivo en su vocación sacerdotal.",
+    year: "2002"
+  },
+  {
+    id: "img-15",
+    src: "/assets/album/foto21.jpg",
+    title: "Canonización en Roma",
+    description: "La Plaza de San Pedro repleta de fieles durante la canonización de San Josemaría el 6 de octubre de 2002, presidida por el Papa Juan Pablo II.",
+    year: "2002"
+  },
+  {
+    id: "img-16",
+    src: "/assets/album/foto13.webp",
+    title: "Tapiz de la canonización",
+    description: "El tapiz con la imagen de San Josemaría colgado en la fachada de la Basílica de San Pedro durante su ceremonia de canonización.",
     year: "2002"
   }
 ];

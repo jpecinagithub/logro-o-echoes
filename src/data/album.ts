@@ -173,7 +173,7 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     src: "/assets/album/padres-josemaria.jpg",
     title: "Los padres de Josemaría",
     description: "José Escrivá y Corzán y María de los Dolores Albás Blanc, padres de San Josemaría. Una pareja profundamente cristiana que transmitió la fe a sus hijos.",
-    year: "1910"
+    year: "1922"
   },
   {
     id: "img-25",
@@ -187,7 +187,7 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     src: "/assets/album/carmen-escriva.webp",
     title: "Carmen Escrivá",
     description: "Carmen Escrivá, hermana de San Josemaría. Fue una colaboradora cercana de su hermano y del Opus Dei durante toda su vida.",
-    year: "1960"
+    year: "1955"
   },
   {
     id: "img-27",
@@ -200,14 +200,14 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     id: "img-28",
     src: "/assets/album/antonio-garrigosa-tienda.webp",
     title: "Tienda de Antonio Garrigosa",
-    description: "La tienda de tejidos 'Antonio Garrigosa Borrell' en Logroño, donde trabajó el padre de San Josemaría. El cartel anunciaba 'Especialidad, Baratura y Buen Gusto'.",
+    description: "La tienda de tejidos 'Antonio Garrigosa Borrell' en Logroño El cartel anunciaba 'Especialidad, Baratura y Buen Gusto'.",
     year: "1915"
   },
   {
     id: "img-29",
     src: "/assets/album/ciriaco-gaztambide.jpg",
-    title: "Ciriaco Gaztambide",
-    description: "El padre Ciriaco Gaztambide, sacerdote carmelita descalzo cuyas huellas en la nieve inspiraron la vocación sacerdotal de Josemaría.",
-    year: "1918"
+    title: "Ciriaco Garrido Lázaro",
+    description: "El padre Ciriaco Garrido Lázaro, canónigo penitenciario y confesoer de Josemaría Escrivá durante su etapa en Logroño.",
+    year: "1925"
   }
 ];

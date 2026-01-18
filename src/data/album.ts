@@ -215,6 +215,6 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     src: "/assets/album/carmelita-descalzo.jpg",
     title: "Padre José Miguel de la V. del Carmen",
     description: "El R.P. José Miguel de la V. del Carmen, carmelita descalzo cuyas huellas en la nieve inspiraron la vocación sacerdotal de Josemaría. Falleció en Oviedo el 23 de septiembre de 1942.",
-    year: "1918"
+    year: "1940"
   }
 ];

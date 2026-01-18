@@ -167,5 +167,47 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     title: "Seminario Conciliar - Foto histórica",
     description: "Imagen histórica del Seminario Conciliar de Logroño, donde Josemaría ingresó tras sentir la llamada de Dios.",
     year: "1918"
+  },
+  {
+    id: "img-24",
+    src: "/assets/album/padres-josemaria.jpg",
+    title: "Los padres de Josemaría",
+    description: "José Escrivá y Corzán y María de los Dolores Albás Blanc, padres de San Josemaría. Una pareja profundamente cristiana que transmitió la fe a sus hijos.",
+    year: "1910"
+  },
+  {
+    id: "img-25",
+    src: "/assets/album/padres-josemaria-2.jpg",
+    title: "Retrato de los padres",
+    description: "Retrato de perfil de José y Dolores Escrivá. Su ejemplo de fe y trabajo influyó decisivamente en la vocación de Josemaría.",
+    year: "1905"
+  },
+  {
+    id: "img-26",
+    src: "/assets/album/carmen-escriva.webp",
+    title: "Carmen Escrivá",
+    description: "Carmen Escrivá, hermana de San Josemaría. Fue una colaboradora cercana de su hermano y del Opus Dei durante toda su vida.",
+    year: "1960"
+  },
+  {
+    id: "img-27",
+    src: "/assets/album/antonio-garrigosa.jpg",
+    title: "Antonio Garrigosa Borrell",
+    description: "Antonio Garrigosa Borrell, comerciante y socio del padre de Josemaría en el negocio textil de Logroño.",
+    year: "1915"
+  },
+  {
+    id: "img-28",
+    src: "/assets/album/antonio-garrigosa-tienda.webp",
+    title: "Tienda de Antonio Garrigosa",
+    description: "La tienda de tejidos 'Antonio Garrigosa Borrell' en Logroño, donde trabajó el padre de San Josemaría. El cartel anunciaba 'Especialidad, Baratura y Buen Gusto'.",
+    year: "1915"
+  },
+  {
+    id: "img-29",
+    src: "/assets/album/ciriaco-gaztambide.jpg",
+    title: "Ciriaco Gaztambide",
+    description: "El padre Ciriaco Gaztambide, sacerdote carmelita descalzo cuyas huellas en la nieve inspiraron la vocación sacerdotal de Josemaría.",
+    year: "1918"
   }
 ];

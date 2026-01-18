@@ -207,7 +207,14 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
     id: "img-29",
     src: "/assets/album/ciriaco-gaztambide.jpg",
     title: "Ciriaco Garrido Lázaro",
-    description: "El padre Ciriaco Garrido Lázaro, canónigo penitenciario y confesoer de Josemaría Escrivá durante su etapa en Logroño.",
+    description: "El padre Ciriaco Garrido Lázaro, canónigo penitenciario y confesor de Josemaría Escrivá durante su etapa en Logroño.",
     year: "1925"
+  },
+  {
+    id: "img-30",
+    src: "/assets/album/carmelita-descalzo.jpg",
+    title: "Padre José Miguel de la V. del Carmen",
+    description: "El R.P. José Miguel de la V. del Carmen, carmelita descalzo cuyas huellas en la nieve inspiraron la vocación sacerdotal de Josemaría. Falleció en Oviedo el 23 de septiembre de 1942.",
+    year: "1918"
   }
 ];

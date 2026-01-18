@@ -58,10 +58,10 @@ export const QUIZ_QUESTIONS_POOL: QuizQuestion[] = [
   },
   {
     id: 8,
-    question: "¿Hasta qué año aproximadamente permaneció San Josemaría vinculado a Logroño?",
+    question: "¿Hasta qué año aproximadamente permaneció la familia de San Josemaría vinculada a Logroño?",
     options: ["1920", "1923", "1925", "1928"],
     correctAnswer: 2,
-    explanation: "San Josemaría estuvo vinculado a Logroño hasta aproximadamente 1925."
+    explanation: "La familia Escrivá estuvo vinculada a Logroño hasta aproximadamente 1925."
   },
   {
     id: 9,
@@ -156,7 +156,7 @@ export const QUIZ_QUESTIONS_POOL: QuizQuestion[] = [
   },
   {
     id: 22,
-    question: "¿Cuál es el nombre del puente histórico de hierro sobre el Ebro en Logroño?",
+    question: "¿Cuál es el nombre del puente histórico sobre el Ebro en Logroño?",
     options: ["Puente de Piedra", "Puente de Hierro", "Puente Nuevo", "Puente Romano"],
     correctAnswer: 1,
     explanation: "El Puente de Hierro es un icónico puente del siglo XIX que cruza el Ebro."
@@ -191,7 +191,7 @@ export const QUIZ_QUESTIONS_POOL: QuizQuestion[] = [
   },
   {
     id: 27,
-    question: "¿Cuántos años vivió aproximadamente San Josemaría en Logroño?",
+    question: "¿Cuántos años vivió aproximadamente la familia de San Josemaría en Logroño?",
     options: ["5 años", "10 años", "15 años", "20 años"],
     correctAnswer: 1,
     explanation: "Vivió en Logroño aproximadamente 10 años, desde 1915 hasta 1925."
@@ -324,7 +324,7 @@ export const QUIZ_QUESTIONS_POOL: QuizQuestion[] = [
   },
   {
     id: 46,
-    question: "¿Cuál era el lema espiritual más conocido de San Josemaría?",
+    question: "¿Cuál es el mensaje central del Opus Dei?",
     options: ["Ora et labora", "Santificar el trabajo", "Ad maiorem Dei gloriam", "Deus caritas est"],
     correctAnswer: 1,
     explanation: "Su mensaje central era la santificación del trabajo ordinario."

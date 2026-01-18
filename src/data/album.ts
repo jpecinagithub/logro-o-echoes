@@ -17,16 +17,16 @@ export const ALBUM_PHOTOS: AlbumPhoto[] = [
   {
     id: "img-02",
     src: "/assets/album/foto3.jpg",
-    title: "La familia Escrivá",
-    description: "Josemaría con sus padres, José Escrivá y Dolores Albás. La familia fue un pilar fundamental en su formación cristiana.",
-    year: "1910"
+    title: "Los hermanos Escrivá",
+    description: "Josemaría con hermanos Santiago y Carmen. La familia fue un pilar fundamental en su formación cristiana.",
+    year: "1906"
   },
   {
     id: "img-03",
     src: "/assets/album/foto8.jpg",
-    title: "Josemaría con su padre",
-    description: "Josemaría paseando con su padre José en el Espolón de Logroño. Su padre fue un ejemplo de integridad y fe para él.",
-    year: "1916"
+    title: "Josemaría con su hermano Santiago",
+    description: "Josemaría paseando con su hermano Santiago en el Espolón de Logroño.",
+    year: "1921"
   },
   {
     id: "img-04",
